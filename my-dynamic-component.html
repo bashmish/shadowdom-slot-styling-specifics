@@ -1,0 +1,37 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+
+<dom-module id="my-dynamic-component">
+
+    <template>
+        <style>
+            span {
+                color: green;
+                text-decoration: underline;
+            }
+        </style>
+
+        <div>
+            <slot>
+                <span>DEFAULT SLOT SPAN: must be green and underlined</span>
+            </slot>
+        </div>
+    </template>
+
+    <script>
+        Polymer({
+            is: 'my-dynamic-component',
+
+            ready: function() {
+                const displayElem = document.createElement('span');
+                displayElem.textContent = 'SPAN DYNAMICICALLY INSERTED INTO LIGHT DOM FROM WITHIN COMPONENT: must be red without underline';
+
+                if (this.querySelector('.light')) {
+                    this.replaceChild(displayElem, this.querySelector('.light'));
+                } else {
+                    this.appendChild(displayElem);
+                }
+            }
+        });
+    </script>
+
+</dom-module>

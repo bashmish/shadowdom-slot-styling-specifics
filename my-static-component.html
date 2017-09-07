@@ -1,0 +1,26 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+
+<dom-module id="my-static-component">
+
+    <template>
+        <style>
+            span {
+                color: green;
+                text-decoration: underline;
+            }
+        </style>
+
+        <div>
+            <slot>
+                <span>DEFAULT SLOT SPAN: must be green and underlined</span>
+            </slot>
+        </div>
+    </template>
+
+    <script>
+        Polymer({
+            is: 'my-static-component'
+        });
+    </script>
+
+</dom-module>

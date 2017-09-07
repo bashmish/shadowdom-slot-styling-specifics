@@ -1,0 +1,11 @@
+{
+  "name": "shadowdom-slot-styling-specifics",
+  "version": "1.0.0",
+  "authors": [
+    "Mikhail Bashkirov <bashmish@gmail.com>"
+  ],
+  "description": "ShadowDOM styling for slot with default content and both incapsulated and external styles defined",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.0.2"
+  }
+}

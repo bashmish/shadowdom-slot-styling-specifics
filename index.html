@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+    <title>ShadowDOM styling for slot with default content and both incapsulated and external styles defined</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="my-static-component.html">
+    <link rel="import" href="my-dynamic-component.html">
+    <style>
+        span {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <my-static-component></my-static-component>
+    <my-static-component><span class="light">LIGHT DOM SPAN: must be red without underline</span></my-static-component>
+    <my-dynamic-component></my-dynamic-component>
+    <my-dynamic-component><span class="light">LIGHT DOM SPAN: must be red without underline</span></my-dynamic-component>
+</body>
+</html>
